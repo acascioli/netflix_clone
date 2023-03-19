@@ -2,6 +2,7 @@ import React from "react";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
+import Billboard from "@/components/Billboard";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <h1>Netflix Clone</h1>
+      <Billboard />
     </>
   );
 }
